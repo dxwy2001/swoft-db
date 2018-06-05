@@ -1244,7 +1244,7 @@ class QueryBuilder implements QueryBuilderInterface
             throw new DbException('Class is not an entity，className=' . $tableName);
         }
 
-        return $entities[$tableName]['table']['name'];
+        return '`'.$entities[$tableName]['table']['name'].'`';
     }
 
     /**
